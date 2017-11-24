@@ -36,7 +36,7 @@ public:
 	//delete
 	~Personas();
 	//operaciones sobrecargadas
-	Personas operator+(Personas& P);
-	Personas operator*(Personas& P);
+	Personas* operator+(Personas&);
+	Personas* operator*(Personas&);
 };
 #endif

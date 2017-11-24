@@ -163,6 +163,15 @@ int main() {
 										if (randE <= 21) {
 											cout<<"Se embarazo"<<endl;
 											embarazada = true;
+											Personas* hijo = new Personas();
+											hijo=(*persona1)+(*persona2);
+											personas.push_back(hijo);
+											cout<<"Estos son los resultados:"<<endl;
+											cout<<hijo->getNombre()<<endl
+											<<hijo->getGenero()<<endl
+											<<hijo->getCabello()<<endl
+											<<hijo->getOjos()<<endl
+											<<hijo->getPiel()<<endl;
 										} else {
 											cout<<"No se embarazo"<<endl;
 											embarazada = false;
@@ -181,6 +190,15 @@ int main() {
 									if (random <= 21) {
 										cout<<"Se embarazo"<<endl;
 										embarazada = true;
+										Personas* hijo = new Personas();
+										hijo=(*persona1)+(*persona2);
+										personas.push_back(hijo);
+										cout<<"Estos son los resultados:"<<endl;
+										cout<<hijo->getNombre()<<endl
+										<<hijo->getGenero()<<endl
+										<<hijo->getCabello()<<endl
+										<<hijo->getOjos()<<endl
+										<<hijo->getPiel()<<endl;
 									} else {
 										cout<<"No se embarazo"<<endl;
 										embarazada = false;
@@ -208,6 +226,5 @@ int main() {
 		}
 
 	}while(opcion!=4);
-
 	return 0;
 }
