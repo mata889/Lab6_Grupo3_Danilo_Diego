@@ -92,7 +92,7 @@ Personas::~Personas(){
 }
 //operator
 Personas Personas::operator+(Personas& P){
-	string Nombre, Genero, Cabello, Ojos, Piel, Fertil;
+	string Nombre, Genero, Cabello, Ojos, Piel, Fertil, GenomaOjos,GenomaPiel,GenomaCabello;
 	cout<<"Ingrese un nombre para su abominacion"<<endl;
 	cin>>Nombre;
 	int r=rand()%1+1;
@@ -109,26 +109,92 @@ Personas Personas::operator+(Personas& P){
 		int ro = rand()%100 + 1;
 		if(ro <= 75){
 			Ojos = "cafe";
+			GenomaOjos = "AA";
 		}else if(ro > 75 && ro < 93){
 			Ojos = "verde";
+			GenomaOjos = "aa";
+
 		}else{
 			Ojos = "azul";
+			GenomaOjos = "aa";
 		}
 	}else if(this->ojos == "cafe" && P.getOjos() == "verde"){
 		int ro = rand()%100 + 1;
 		if(ro <= 50){
 			Ojos = "cafe";
+			GenomaOjos = "Aa";
 		}else if(ro > 50 && ro <= 87){
 			Ojos = "verde";
+			GenomaOjos = "aa";
 		}else{
 			Ojos = "azul";
+			GenomaOjos = "aa";
 		}
 	}else if(this->ojos == "cafe" && P.getOjos() == "azul"){
 		int ro = rand()%100 + 1;
 		if(ro <= 50){
 			Ojos = "cafe";
+			GenomaOjos = "Aa";
 		}else{
 			Ojos = "azul";
+			GenomaOjos = "aa";
+		}
+	}else if(this->ojos == "verde" && P.getOjos() == "verde"){
+		int ro = rand()%100 + 1;
+		if(ro <= 75){
+			Ojos = "verde";
+			GenomaOjos = "aa";
+		}else{
+			Ojos = "azul";
+			GenomaOjos = "aa";
+		}
+	}else if(this->ojos == "verde" && P.getOjos() == "azul"){
+		int ro = rand()%100 + 1;
+		if(ro <= 50){
+			Ojos = "verde";
+			GenomaOjos = "aa";
+		}else{
+			Ojos = "azul";
+			GenomaOjos = "aa";
+		}
+	}else if(this->ojos == "azul" && P.getOjos() == "azul"){
+		int ro = rand()%100+1;
+		if(ro <= 99){
+			Ojos = "azul";
+			GenomaOjos = "aa";
+		}else{
+			Ojos = "verde";
+			GenomaOjos = "aa";
+		}
+	}else if(this->ojos == "verde" && P.getOjos() == "cafe"){
+		int ro = rand()%100+1;
+		if(ro <= 50){
+			Ojos = "cafe";
+			GenomaOjos = "Aa";
+		}else if(ro > 50 && ro <= 87){
+			Ojos = "verde";
+			GenomaOjos = "aa";
+		}else{
+			Ojos = "azul";
+			GenomaOjos = "aa";
+		}
+	}else if(this->ojos == "azul" && P.getOjos() == "cafe"){
+		int ro = rand()%100 + 1;
+		if(ro <= 50){
+			Ojos = "cafe";
+			GenomaOjos = "Aa";
+		}else{
+			Ojos = "azul";
+			GenomaOjos = "aa";
+		}
+	}else{
+		int ro = rand()%100 + 1;
+		if(ro <= 50){
+			Ojos = "verde";
+			GenomaOjos = "aa";
+		}else{
+			Ojos = "azul";
+			GenomaOjos = "aa";
 		}
 	}
 
