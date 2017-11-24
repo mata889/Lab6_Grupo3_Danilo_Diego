@@ -87,7 +87,19 @@ int main() {
 				personas.push_back(persona);
 
 			}break;
-			
+
+			//Eliminar
+			case 2:{
+				int pos;
+				for (int i = 0; i < personas.size(); i++) {
+					cout<<i<<"). "<<personas.at(i)->getNombre()<<endl;
+				}
+				cout<<"Ingrese la posicion que desea eliminar"<<endl;
+				cin>>pos;
+				personas.erase(personas.begin() + pos);
+
+			}break;
+
 		}
 
 	}while(opcion!=4);
