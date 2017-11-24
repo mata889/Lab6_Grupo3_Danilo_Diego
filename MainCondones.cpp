@@ -94,9 +94,14 @@ int main() {
 				for (int i = 0; i < personas.size(); i++) {
 					cout<<i<<"). "<<personas.at(i)->getNombre()<<endl;
 				}
-				cout<<"Ingrese la posicion que desea eliminar"<<endl;
-				cin>>pos;
-				personas.erase(personas.begin() + pos);
+				if (personas.size()>0) {
+					cout<<"Ingrese la posicion que desea eliminar"<<endl;
+					cin>>pos;
+					personas.erase(personas.begin() + pos);
+
+				} else {
+					cout<<"No hey personas en la lista!"<<endl;
+				}
 
 			}break;
 
