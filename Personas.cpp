@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -197,9 +198,18 @@ Personas Personas::operator+(Personas& P){
 			GenomaOjos = "aa";
 		}
 	}
-
 	//piel
-
+	if(this->piel ==  "Negro" && P.getPiel()=="Negro"){
+		vector<string> GenHijos;
+		string GP1 = this->genomaPiel;
+		string GP2 = P.getGenomaPiel();
+		string GPH = "";
+		for (size_t i = 0; i < 2; i++) {
+			for (size_t j = 0; j < 2; j++) {
+				
+			}
+		}
+	}
 	//Fertilidad
 
 	Personas hijo;
