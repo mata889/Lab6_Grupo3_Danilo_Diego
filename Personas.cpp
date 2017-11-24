@@ -65,7 +65,7 @@ Personas Personas::operator+(Personas& P){
 	return hijo;
 }
 Personas Personas::operator*(Personas& P){
-	Persona hijo;
+	Personas hijo;
 
 	return hijo;
 }

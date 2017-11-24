@@ -1,5 +1,5 @@
 lab6: MainCondones.o Personas.o
-	g++ MainCondones.o Persona.o -0 lab6
+	g++ MainCondones.o Personas.o -o lab6
 
 Main.o:	Personas.h MainCondones.cpp
 	g++ -c MainCondones.cpp
