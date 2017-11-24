@@ -20,7 +20,6 @@ public:
 	//setC
 
 	void setNombre(string);
-	void setGenero(string);
 	void setCabello(string);
 	void setOjos(string);
 	void setPiel(string);

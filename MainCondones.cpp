@@ -94,10 +94,70 @@ int main() {
 				for (int i = 0; i < personas.size(); i++) {
 					cout<<i<<"). "<<personas.at(i)->getNombre()<<endl;
 				}
-				cout<<"Ingrese la posicion que desea eliminar"<<endl;
-				cin>>pos;
-				personas.erase(personas.begin() + pos);
+				if (personas.size()>0) {
+					cout<<"Ingrese la posicion que desea eliminar"<<endl;
+					cin>>pos;
+					personas.erase(personas.begin() + pos);
 
+				} else {
+					cout<<"No hey personas en la lista!"<<endl;
+				}
+
+			}break;
+			//Simulacion
+			case 3:{
+				int pos;
+				Personas* persona1;
+				Personas* persona2;
+
+				for (int i = 0; i < personas.size(); i++) {
+					cout<<i<<"). "<<personas.at(i)->getNombre()<<endl;
+				}
+				if (personas.size()>0) {
+					bool validar = true;
+					do{
+						cout<<"Ingrese la posicion de la Primera persona"<<endl;
+						cin>>pos;
+						persona1 = personas.at(pos);
+						cout<<"Ingrese la posicion de la segunda persona"<<endl;
+						cin>>pos;
+						persona2 = personas.at(pos);
+
+						//Validar genero
+						string gen1, gen2, fer1, fer2;
+						gen1 = persona1->getGenero();
+						gen2 = persona2->getGenero();
+						fer1 = persona1->getFertil();
+						fer2 = persona2->getFertil();
+
+						//
+						if (gen1!=gen2) {
+							if(fer1 == "si" && fer2 == "si"){
+								string condon;
+								cout<<"Usaran Preservativo?"<<endl
+								<<"1. Si"<<endl
+								<<"2. No"<<endl;
+								cin>>condon;
+								if (condon == "1") {
+									validar = false;
+								} else {
+									validar = false;
+								}
+
+							}else {
+								cout<<"Una persona no es fertil!"<<endl;
+							}
+						} else {
+							cout<<"Son del mismo genero!"<<endl;
+						}
+
+
+					}while(validar==true);
+
+
+				} else {
+					cout<<"No hey personas en la lista!"<<endl;
+				}
 			}break;
 
 		}
