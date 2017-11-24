@@ -14,16 +14,22 @@ Personas::Personas(){
 	this->ojos=" ";
 	this->piel=" ";
 	this->fertil=" ";
+	this->genomaOjos=" ";
+	this->genomaPiel=" ";
+	this->genomaCabello=" ";
 	srand(time(NULL));
 }
 
-Personas::Personas(string pNombre,string pGenero,string pCabello,string pOjos,string pPiel,string pFertil){
+Personas::Personas(string pNombre,string pGenero,string pCabello,string pOjos,string pPiel,string pFertil,string pGenomaOjos,string pGenomaPiel,string pGenomaCabello){
 	nombre=pNombre;
 	genero=pGenero;
 	cabello=pCabello;
 	ojos=pOjos;
 	piel=pPiel;
 	fertil=pFertil;
+	genomaOjos=pGenomaOjos;
+	genomaPiel=pGenomaPiel;
+	genomaCabello=pGenomaCabello;
 }
 
 string Personas::getNombre(){
@@ -44,6 +50,15 @@ string Personas::getPiel(){
 string Personas::getFertil(){
 	return fertil;
 }
+string Personas::getGenomaPiel(){
+	return genomaPiel;
+}
+string Personas::getGenomaOjos(){
+	return genomaOjos;
+}
+string Personas::getGenomaCabello(){
+	return genomaCabello;
+}
 
 
 void Personas::setNombre(string pNombre){
@@ -63,6 +78,15 @@ void Personas::setPiel(string pPiel){
 }
 void Personas::setFertil(string pFertil){
 	fertil=pFertil;
+}
+void Personas::setGenomaPiel(string pGenomaPiel){
+	genomaPiel=pGenomaPiel;
+}
+void Personas::setGenomaOjos(string pGenomaOjos){
+	genomaOjos=pGenomaOjos;
+}
+void Personas::setGenomaCabello(string pGenomaCabello){
+	genomaCabello=pGenomaCabello;
 }
 Personas::~Personas(){
 }

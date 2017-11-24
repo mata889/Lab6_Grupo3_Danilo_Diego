@@ -5,11 +5,11 @@
 using namespace std;
 class Personas{
 private:
-	string nombre;string genero;string cabello;string ojos;string piel;string fertil;
+	string nombre;string genero;string cabello;string ojos;string piel;string fertil,genomaOjos,genomaPiel,genomaCabello;
 public:
 	//Constructores
 	Personas();
-	Personas(string,string,string,string,string,string);
+	Personas(string,string,string,string,string,string,string,string,string);
 	//get
 	string getNombre();
 	string getGenero();
@@ -17,6 +17,10 @@ public:
 	string getOjos();
 	string getPiel();
 	string getFertil();
+
+	string getGenomaOjos();
+	string getGenomaPiel();
+	string getGenomaCabello();
 	//setC
 
 	void setNombre(string);
@@ -25,6 +29,10 @@ public:
 	void setPiel(string);
 	void setFertil(string);
 	void setGenero(string);
+
+	void setGenomaOjos(string);
+	void setGenomaPiel(string);
+	void setGenomaCabello(string);
 	//delete
 	~Personas();
 	//operaciones sobrecargadas
