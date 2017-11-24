@@ -57,5 +57,15 @@ void Personas::setFertil(string pFertil){
 	fertil=pFertil;
 }
 Personas::~Personas(){
+}
+//operator
+Personas Personas::operator+(Personas& P){
+	Personas hijo;
 
+	return hijo;
+}
+Personas Personas::operator*(Personas& P){
+	Persona hijo;
+
+	return hijo;
 }
