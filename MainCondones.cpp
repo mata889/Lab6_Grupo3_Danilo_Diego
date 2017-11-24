@@ -19,7 +19,7 @@ int main() {
 		switch(opcion){
 			case 1:{
 				//AGREGAR
-				string nombre, genero, cabello, ojos, piel, fertil;
+				string nombre, genero, cabello, ojos, piel, fertil, genomaOjos, genomaPiel, genomaCabello;
 				//Nombre
 				cout<<"Ingrese su nombre:"<<endl;
 				cin>>nombre;
@@ -41,10 +41,13 @@ int main() {
 				cin>>cabello;
 				if (cabello=="1") {
 					cabello = "negro";
+					genomaCabello = "AA";
 				} else if (cabello=="2") {
 					cabello = "rubio";
+					genomaCabello = "aa";
 				} else {
 					cabello = "pelirrojo";
+					genomaCabello = "aa";
 				}
 				//Ojos
 				cout<<"Ingrese el color de Ojos:"<<endl
@@ -54,10 +57,13 @@ int main() {
 				cin>>ojos;
 				if (ojos=="1") {
 					ojos = "cafe";
+					genomaOjos = "AA";
 				} else if (ojos=="2") {
 					ojos = "azul";
+					genomaOjos = "aa";
 				} else {
 					ojos = "verde";
+					genomaOjos = "aa";
 				}
 				//Piel
 				cout<<"Ingrese el color de Piel:"<<endl
@@ -67,10 +73,13 @@ int main() {
 				cin>>piel;
 				if (piel=="1") {
 					piel = "negro";
+					genomaPiel = "aa";
 				} else if (piel=="2") {
 					piel = "trigueno";
+					genomaPiel = "aa";
 				} else {
 					piel = "blanco";
+					genomaPiel = "AA";
 				}
 				//Fertilidad
 				cout<<"Ingrese si es Fertil:"<<endl
@@ -83,7 +92,7 @@ int main() {
 					fertil = "no";
 				}
 				//Agregar al Vector
-				Personas* persona = new Personas(nombre, genero, cabello, ojos, piel, fertil);
+				Personas* persona = new Personas(nombre, genero, cabello, ojos, piel, fertil, genomaOjos, genomaPiel, genomaCabello);
 				personas.push_back(persona);
 
 			}break;
