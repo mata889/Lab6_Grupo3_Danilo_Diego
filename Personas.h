@@ -7,6 +7,7 @@ class Personas{
 private:
 	string nombre;string genero;string cabello;string ojos;string piel;string fertil;
 public:
+	//Constructores
 	Personas();
 	Personas(string,string,string,string,string,string);
 	//get
@@ -24,7 +25,10 @@ public:
 	void setOjos(string);
 	void setPiel(string);
 	void setFertil(string);
-
+	//delete
 	~Personas();
+	//operaciones sobrecargadas
+	Personas operator+(Personas& P);
+	Personas operator*(Personas& P);
 };
 #endif
