@@ -1,4 +1,11 @@
 #include "Personas.h"
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <string>
+
+using namespace std;
+
 
 Personas::Personas(){
 	this->nombre=" ";
@@ -7,6 +14,7 @@ Personas::Personas(){
 	this->ojos=" ";
 	this->piel=" ";
 	this->fertil=" ";
+	srand(time(NULL));
 }
 
 Personas::Personas(string pNombre,string pGenero,string pCabello,string pOjos,string pPiel,string pFertil){
@@ -60,6 +68,34 @@ Personas::~Personas(){
 }
 //operator
 Personas Personas::operator+(Personas& P){
+	string Nombre, Genero, Cabello, Ojos, Piel, Fertil;
+	cout<<"Ingrese un nombre para su abominacion"<<endl;
+	cin>>Nombre;
+	int r=rand()%1+1;
+	//genero
+	if (r==1) {
+		Genero = "M";
+	}else{
+		Genero = "F";
+	}
+	//cabello
+
+	//ojos
+	if(this->ojos == "cafe" && P.getOjos() == "cafe"){
+		int ro = rand()%100 + 1;
+		if(ro <= 75){
+			Ojos = "cafe";
+		}else if(ro > 75 && ro < 93){
+			Ojos = "verde";
+		}else{
+			Ojos = "azul";
+		}
+	}
+	
+	//piel
+
+	//Fertilidad
+
 	Personas hijo;
 
 	return hijo;
