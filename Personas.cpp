@@ -90,8 +90,24 @@ Personas Personas::operator+(Personas& P){
 		}else{
 			Ojos = "azul";
 		}
+	}else if(this->ojos == "cafe" && P.getOjos() == "verde"){
+		int ro = rand()%100 + 1;
+		if(ro <= 50){
+			Ojos = "cafe";
+		}else if(ro > 50 && ro <= 87){
+			Ojos = "verde";
+		}else{
+			Ojos = "azul";
+		}
+	}else if(this->ojos == "cafe" && P.getOjos() == "azul"){
+		int ro = rand()%100 + 1;
+		if(ro <= 50){
+			Ojos = "cafe";
+		}else{
+			Ojos = "azul";
+		}
 	}
-	
+
 	//piel
 
 	//Fertilidad

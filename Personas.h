@@ -24,6 +24,7 @@ public:
 	void setOjos(string);
 	void setPiel(string);
 	void setFertil(string);
+	void setGenero(string);
 	//delete
 	~Personas();
 	//operaciones sobrecargadas
