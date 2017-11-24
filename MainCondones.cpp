@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	int opcion;
-	//vector<Personas*>personas;
+	vector<Personas*>personas;
 	do{
 		cout<<"*****MENU*****"<<endl
 		<<"1. Agregar"<<endl
@@ -28,17 +28,66 @@ int main() {
 				<<"1. Masculino"<<endl
 				<<"2. Femenino"<<endl;
 				cin>>genero;
-				if (genero==1) {
+				if (genero=="1") {
 					genero = "M";
 				} else {
 					genero = "F";
 				}
 				//Cabello
 				cout<<"Ingrese el color de Cabello:"<<endl
-				<<"1. Negro"
-
+				<<"1. Negro"<<endl
+				<<"2. Rubio"<<endl
+				<<"3. Pelirrojo"<<endl;
+				cin>>cabello;
+				if (cabello=="1") {
+					cabello = "negro";
+				} else if (cabello=="2") {
+					cabello = "rubio";
+				} else {
+					cabello = "pelirrojo";
+				}
+				//Ojos
+				cout<<"Ingrese el color de Ojos:"<<endl
+				<<"1. Cafes"<<endl
+				<<"2. Azules"<<endl
+				<<"3. Verdes"<<endl;
+				cin>>ojos;
+				if (ojos=="1") {
+					ojos = "cafe";
+				} else if (ojos=="2") {
+					ojos = "azul";
+				} else {
+					ojos = "verde";
+				}
+				//Piel
+				cout<<"Ingrese el color de Piel:"<<endl
+				<<"1. Negro"<<endl
+				<<"2. Trigueno"<<endl
+				<<"3. Blanco"<<endl;
+				cin>>piel;
+				if (piel=="1") {
+					piel = "negro";
+				} else if (piel=="2") {
+					piel = "trigueno";
+				} else {
+					piel = "blanco";
+				}
+				//Fertilidad
+				cout<<"Ingrese si es Fertil:"<<endl
+				<<"1. Si"<<endl
+				<<"2. No"<<endl;
+				cin>>fertil;
+				if (fertil=="1") {
+					fertil = "si";
+				} else {
+					fertil = "no";
+				}
+				//Agregar al Vector
+				Personas* persona = new Personas(nombre, genero, cabello, ojos, piel, fertil);
+				personas.push_back(persona);
 
 			}break;
+			
 		}
 
 	}while(opcion!=4);
