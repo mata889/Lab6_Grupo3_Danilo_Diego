@@ -1,0 +1,4 @@
+/home/danilososa98/Progra_3/Lab_P3/Lab6_Grupo3_Danilo_Diego_Sanchez/MainCondones.cpp: In function ‘int main()’:
+/home/danilososa98/Progra_3/Lab_P3/Lab6_Grupo3_Danilo_Diego_Sanchez/MainCondones.cpp:18:2: error: expected ‘;’ before ‘return’
+  return 0;
+  ^
