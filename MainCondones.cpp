@@ -2,6 +2,9 @@
 #include <string>
 #include "Personas.h"
 #include <vector>
+#include <math.h>
+#include <time.h>
+#include <cstdlib>
 using namespace std;
 
 int main() {
@@ -148,8 +151,41 @@ int main() {
 								<<"2. No"<<endl;
 								cin>>condon;
 								if (condon == "1") {
+									bool embarazada, roto;
+									srand(time(NULL));
+									int randE=rand()%100;
+									srand(time(NULL));
+									int randR=rand()%100;
+									//
+									if (randR==4) {
+										cout<<"Se rompio"<<endl;
+										roto = true;
+										if (randE <= 21) {
+											cout<<"Se embarazo"<<endl;
+											embarazada = true;
+										} else {
+											cout<<"No se embarazo"<<endl;
+											embarazada = false;
+										}
+									} else {
+										cout<<"No se embarazo"<<endl;
+										roto = false;
+										embarazada = false;
+									}
 									validar = false;
 								} else {
+									bool embarazada;
+									srand(time(NULL));
+									int random=rand()%100;
+									cout<<random<<endl;
+									if (random <= 21) {
+										cout<<"Se embarazo"<<endl;
+										embarazada = true;
+									} else {
+										cout<<"No se embarazo"<<endl;
+										embarazada = false;
+									}
+									//
 									validar = false;
 								}
 
